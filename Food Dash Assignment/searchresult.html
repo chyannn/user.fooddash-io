@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=" Food and Grocery You Love, We Delievered. ">
+    <meta name="keywords" content="Food,Grocery,Beverages">
+    <meta http-equiv="refresh" content="30"> <!-- refresh page every 30 secs -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Phone size diff need this to adjust -->
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/search.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Food Dash</title>
+    <link rel="icon" type="image/x-icon" href="/icon/favicon (2).ico">
+</head>
+
+<body>
+    
+    <nav>
+        <ul>
+            <li><span style="font-size:38px;cursor:pointer" onclick="openNav()">&#9776;</span></li>
+            <li><img src="/Image/fd.png" alt="Logo" style="width: 200px;"></li>
+            <li style="float:right"><a class="active" href="login.html">Login</a></li>
+            <li style="float:right"><a href="#news">News</a></li>
+            <li style="float:right"><a href="#contact">Contact</a></li>
+            <li style="float:right"><a href="cart.html"><i class=" fa fa-shopping-cart"></i></a></li>
+        </ul>
+    </nav>
+      
+    <nav>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="active" href="index.html"><i class="fa fa-home"></i> Home</a>
+            <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+            <button class="dropdown-btn"><i class="fa fa-comment"></i> &nbsp;About
+                <i class="fa fa-caret-down"></i>
+            </button>
+                <div class="dropdown-container">
+                    <a href="#"> <i class="fa fa-sign-out"></i> &nbsp;Background</a>
+                    <a href="#"><i class="fa fa-fw fa-user"></i> Management</a>
+                    <a href="faq.html"><i class="fa fa-question"></i> &nbsp; FAQ</a>
+                </div>
+            <a href="login.html"><i class="fa fa-sign-in"></i> &nbsp; Login</a>
+            <a href="login.html"><i class="fa fa-sitemap"></i> &nbsp; Site Map</a>
+        </div>
+    </nav>
+    <br>
+    <main>
+        <header>Search Results</header>
+        <table>
+            <tr>
+                <th>Restaurants/Shops</th>
+                <th>Reference Pic</th>
+                <th>Description</th>
+                    
+            </tr>
+
+            
+           <tr>
+                        <td>Kafka</td>
+                        <td><img src="/Image/kafka.jpg" alt="Kafka" style="width:100%"></td>
+                        <td>Quaint and humble joints in the heart of Georgetown.
+                            Inspired by honest designs, eatery and coffee.
+                        </td>
+                        <td>
+                            <a href="shop1.html">
+                                <div class="btn">Menu</div>
+                            </a>
+                        </td>
+                    
+            </tr>
+        </table>
+    </main>
+</body>
