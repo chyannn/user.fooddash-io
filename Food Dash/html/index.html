@@ -1,0 +1,233 @@
+<!-- Homepage -->
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=" Food and Grocery You Love, We Delievered. ">
+    <meta name="keywords" content="Food,Grocery,Beverages">
+    <meta http-equiv="refresh" content="30"> <!-- refresh page every 30 secs -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Phone size diff need this to adjust -->
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Food Dash</title>
+    <link rel="icon" type="image/x-icon" href="/icon/favicon (2).ico">
+</head>
+
+<body>
+    
+    <nav>
+        <ul>
+            <li><span style="font-size:38px;cursor:pointer" onclick="openNav()">&#9776;</span></li>
+            <li><img src="/Image/fd.png" alt="Logo" style="width: 200px;"></li>
+            <li style="float:right"><a class="active" href="login.html">Login</a></li>
+            <li style="float:right"><a href="aboutUs.html">About</a></li>
+            <li style="float:right"><a href="contactUs.html">Contact</a></li>
+            <li style="float:right"><a href="cart.html"><i class=" fa fa-shopping-cart"></i></a></li>
+        </ul>
+    </nav>
+      
+    <nav>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="active" href="index.html"><i class="fa fa-home"></i> Home</a>
+            <a href="contactUs.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+            <button class="dropdown-btn"><i class="fa fa-comment"></i> &nbsp;About
+                <i class="fa fa-caret-down"></i>
+            </button>
+                <div class="dropdown-container">
+                    <a href="#"> <i class="fa fa-sign-out"></i> &nbsp;Background</a>
+                    <a href="#"><i class="fa fa-fw fa-user"></i> Management</a>
+                    <a href="faq.html"><i class="fa fa-question"></i> &nbsp; FAQ</a>
+                </div>
+            <a href="login.html"><i class="fa fa-sign-in"></i> &nbsp; Login</a>
+            <a href="login.html"><i class="fa fa-sitemap"></i> &nbsp; Site Map</a>
+        </div>
+    </nav>
+
+    <main>
+        <form id="form">
+            <input type="text" placeholder="Search for your craves...">
+            <button style="font-size: 30px">Go!</button>
+        </form>
+        <br>
+        <h2>Recommendations</h2>
+        <table>
+            <!-- First Photo Grid-->
+            <div class="responsive">
+                <div class="shops" id="food">
+                    <div class="shop1">
+                        <img src="/Image/the book.jpg" alt="The Book Sandwich" style="width:50%">
+                        <h3>The Book Sandwich Cafe</h3>
+                        <p>A Restaurant & Cafe at George Town Penang. 
+                            Open for Lunch, brunch & Dinner. 
+                            Serving fusion Sandwiches, Pasta, Burger, Steak.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="shops" id="food">
+                    <div class="shop1">
+                        <img src="/Image/the book.jpg" alt="The Book Sandwich" style="width:50%">
+                        <h3>The Book Sandwich Cafe</h3>
+                        <p>A Restaurant & Cafe at George Town Penang. 
+                            Open for Lunch, brunch & Dinner. 
+                            Serving fusion Sandwiches, Pasta, Burger, Steak.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Photo Grid-->
+            <div class="responsive">
+                <div class="shops">
+                    <div class="shop2">
+                        <img src="/Image/shokudoniban.jpg" alt="Shokudo Niban" style="width:50%">
+                        <h3>Shokudō Niban</h3>
+                        <p>Brought to you by the team of Restaurant au Jardin and Basil, le bistrot. 
+                            Shokudō Niban is a 16 seater Japanese Tapas Bar/Canteen.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="shops">
+                    <div class="shop2">
+                        <img src="/Image/shokudoniban.jpg" alt="Shokudo Niban" style="width:50%">
+                        <h3>Shokudō Niban</h3>
+                        <p>Brought to you by the team of Restaurant au Jardin and Basil, le bistrot. 
+                            Shokudō Niban is a 16 seater Japanese Tapas Bar/Canteen.</p>
+                    </div>
+                </div>
+            </div>
+        </table>
+
+        <section>
+            <header style="text-align: left;">Vouchers & Coupons</header>
+            <br>
+            <div class="coupon">
+                <div class="container">
+                    <h3>Free delievery</h3>
+                </div>
+                <img src="/Image/coupon1.png" alt="Avatar" style="width:100%;">
+                <div class="container" style="background-color:white">
+                    <h2><b>20% OFF YOUR PURCHASE</b></h2>
+                    <p>Useable for all restaurants</p>
+                </div>
+                <div class="container">
+                    <p>Use Promo Code: <span class="promo">FREEDEL</span></p>
+                    <p class="expire">Expiry Date: Jan 10, 2023</p>
+                </div>
+            </div>
+        </section>
+
+        
+        
+
+    </main>
+    
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.body.style.backgroundColor = "white";
+        }
+
+        //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                }   
+                else {
+                dropdownContent.style.display = "block";
+                }
+            });
+        }   
+    </script>
+    
+</body>
+
+<footer>
+    <!-- Pagination -->
+    <div class="center">
+        <div class="pagination">
+            <a href="#" >&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#" >2</a>
+            <a href="#" >3</a>
+            <a href="#" >4</a>
+            <a href="#" >&raquo;</a>
+        </div>
+    </div>
+    <div class="footer__disclaimer"> &copy; 2022 fooddash </div>
+    <div style="font-size:0.8em;">
+        Food Dash Penang Sdn Bhd<br>
+        B-24-01, <br>
+        The Corporate,<br>
+        Dash Street, Georgetown<br>
+        11400, Penang,<br>
+        Malaysia
+    </div>
+
+    <div class="home-cuisines">
+        <h4>
+            <center><strong>Popular Cuisines &amp; Dishes</strong></center></h4>
+        <ul class="home-cuisines__list" style="margin: 0;padding: 0; list-style: none; font-size: 16px;-webkit-columns: 4; -moz-columns: 4; columns: 4; column-width: auto; column-count: 4;">
+            <li class="home-cuisines__list__item">
+                <a href="#">American</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Asian</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Beverages</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Cakes and pastries</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Chinese</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Desserts</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Halal in KL</a></li>
+            <li class="home-cuisines_ist__item">
+                <a href="#">Indian</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Indonesian</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Italian</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Japanese</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Korean</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Malaysian food</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Pizza</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Seafood</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Sushi</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Thai</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Vegetarian</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Vietnamese</a></li>
+            <li class="home-cuisines__list__item">
+                <a href="#">Western</a></li>
+        </ul>
+    </div>
+    
+
+</footer>
+

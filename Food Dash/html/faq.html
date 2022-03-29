@@ -1,0 +1,136 @@
+<!-- Homepage -->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=" Food and Grocery You Love, We Delievered. ">
+    <meta name="keywords" content="Food,Grocery,Beverages">
+    <meta http-equiv="refresh" content="30"> <!-- refresh page every 30 secs -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Phone size diff need this to adjust -->
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/faq.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Food Dash</title>
+    <link rel="icon" type="image/x-icon" href="/icon/favicon (2).ico">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><span style="font-size:38px;cursor:pointer" onclick="openNav()">&#9776;</span></li>
+            <li><img src="/Image/fd.png" alt="Logo" style="width: 200px;"></li>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li style="float:right"><a href="cart.html"><i class=" fa fa-shopping-cart"> Cart</i></a></li>
+        </ul>
+    </nav>
+
+    <nav>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="active" href="homepage.html"><i class="fa fa-home"></i> Home</a>
+            <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+            <a href="language.html">Language</a>
+                <button class="dropdown-btn"><i class="fa fa-comment"></i> &nbsp;About
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="#"> <i class="fa fa-sign-out"></i> &nbsp;Background</a>
+                    <a href="#"><i class="fa fa-fw fa-user"></i> Management</a>
+                    <a href="faq.html"><i class="fa fa-question"></i> &nbsp; FAQ</a>
+                </div>
+            <a href="login.html"><i class="fa fa-sign-in"></i> &nbsp; Login</a>
+            <a href="login.html"><i class="fa fa-sitemap"></i> &nbsp; Site Map</a>
+        </div>
+        
+    </nav>
+
+    <main>
+        <br>
+        <header>FAQ (Frequently Asked Questions)</header>
+        <br>
+        <button class="accordion">How can I order food in Malaysia</button>
+        <div class="panel">
+            <p><b>1. Find a restaurant.</b> Enter your delivery address in the location form 
+                to see all the places that deliver to your location. 
+                It can be your home, office, a hotel or even parks!
+            <br>
+            <br>
+            <b>2. Choose your dishes.</b> Browse the menu of the chosen restaurant, 
+                select your dishes and add them to your basket. When you are done, 
+                press the "Checkout" button.
+            <br>
+            <br>
+            <b>3. Checkout & Payment.</b> Check your order, payment method selection
+                and exact delivery address. Simply follow the checkout instructions 
+                from there.
+            <br>
+            <br>
+            <b>4. Delivery.</b> We will send you an email and SMS confirming your 
+                order and delivery time. Sit back, relax and wait for piping hot food to be conveniently delivered to you!
+            </p>
+        </div>
+
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+        <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+        <p>Lorem ipsum...</p>
+        </div>
+        
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+
+        <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.body.style.backgroundColor = "white";
+        }
+
+        //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+                }   
+                else {
+                dropdownContent.style.display = "block";
+                }
+            });
+        }   
+    </script>    
+    </main>
+
+
+
+</body>
